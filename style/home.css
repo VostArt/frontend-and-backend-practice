@@ -1,106 +1,147 @@
 /* Главная страница */
-.content {
-  padding: 40px;
-  max-width: 900px;
-  margin: 0 auto;
+.author-info {
+    margin-bottom: 40px;
 }
 
-.profile-card {
-  background: #e0e0e0;
-  border-radius: 25px;
-  padding: 40px;
-  margin-bottom: 40px;
-  text-align: center;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+.author-info h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #555;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-.profile-photo {
-  width: 200px;
-  height: 250px;
-  border-radius: 20px;
-  object-fit: cover;
-  margin: 20px auto;
-  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
-  border: 5px solid #e0e0e0;
+.author-card {
+    background: #e0e0e0;
+    border-radius: 25px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
 }
 
-.profile-name {
-  font-size: 2em;
-  color: #555;
-  margin: 15px 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+.author-card img {
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    border: 5px solid #e0e0e0;
 }
 
-.profile-group {
-  font-size: 1.2em;
-  color: #777;
-  margin-bottom: 20px;
+.author-details h3 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.group {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 20px;
 }
 
 .about-me {
-  background: #e0e0e0;
-  padding: 25px;
-  border-radius: 20px;
-  margin: 30px 0;
-  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
 }
 
-.skills-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 30px 0;
+.about-me h4 {
+    color: #555;
+    margin-bottom: 10px;
 }
 
-.skill-tag {
-  background: #e0e0e0;
-  color: #555;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: 600;
-  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
-  transition: all 0.3s ease;
+.about-me p {
+    color: #666;
+    line-height: 1.6;
 }
 
-.skill-tag:hover {
-  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
-  color: #667eea;
+/* Skills section */
+.skills {
+    margin: 40px 0;
 }
 
-.experience-section {
-  margin-top: 50px;
+.skills h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #555;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-.section-title {
-  font-size: 2em;
-  color: #555;
-  text-align: center;
-  margin-bottom: 30px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-.experience-card {
-  background: #e0e0e0;
-  padding: 25px;
-  margin: 20px 0;
-  border-radius: 20px;
-  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
-  transition: all 0.3s ease;
+.skill-item {
+    background: #e0e0e0;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    color: #555;
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    transition: all 0.3s ease;
 }
 
-.experience-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+.skill-item:hover {
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    color: #667eea;
+    transform: translateY(-5px);
 }
 
-.experience-title {
-  font-size: 1.3em;
-  color: #555;
-  margin-bottom: 10px;
+/* Experience section */
+.experience {
+    margin: 40px 0;
 }
 
-.experience-desc {
-  color: #777;
-  line-height: 1.6;
+.experience h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #555;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-item {
+    background: #e0e0e0;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+.experience-item h3 {
+    color: #555;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.experience-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .author-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
