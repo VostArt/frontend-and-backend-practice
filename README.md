@@ -1,1 +1,2 @@
-https://vostart.github.io/frontend-and-backend-practice/
+https://vostart.github.io/frontend-and-backend-practice/index.html
+
