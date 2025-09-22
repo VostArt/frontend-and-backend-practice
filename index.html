@@ -1,74 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа - Козин Артём Романович</title>
-    <link rel="stylesheet" href="style/styles.css">
-</head>
-<body>
-    <div class="page-container">
-        <header>
-            <h1>Персональный сайт</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="pages/news.html">Новости</a></li>
-                    <li><a href="pages/goods.html">Товары</a></li>
-                    <li><a href="pages/contacts.html">Контакты</a></li>
-                    <li><a href="pages/practices.html">Что-то</a></li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Семестровая работа - Козин Артём Романович</title>
+        <link rel="stylesheet" href="style/styles.css" />
+    </head>
+    <body>
+        <div class="page-container">
+            <!-- Header -->
+            <header class="header" role="banner">
+                <span class="logo" aria-hidden="true">Семестровая работа</span>
+            </header>
+
+            <!-- Navigation -->
+            <nav class="nav" role="navigation" aria-label="Главное меню">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/news.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/practices.html">Практики</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/goods.html">Товары</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacts.html">Контакты</a>
+                    </li>
                 </ul>
             </nav>
-        </header>
 
-        <main>
-            <section class="author-info">
-                <h2>Информация об авторе</h2>
-                <div class="author-card">
-                    <img src="images/photo.png" alt="Фото Козина Артёма" width="200" height="250">
-                    <div class="author-details">
-                        <h3>Козин Артём Романович</h3>
-                        <p class="group">ЭФБО-15-24</p>
-                        <div class="about-me">
-                            <h4>Обо мне:</h4>
-                            <p>Я родился в Москве. Увлекаюсь программированием, изучаю веб-разработку и постоянно совершенствую свои навыки.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- Main content -->
+            <main class="content" id="main" role="main">
+                <section class="profile-header" aria-labelledby="profile-title">
+                    <h1 id="profile-title" class="profile-title">Информация об авторе</h1>
+                    <img class="profile-photo" src="images/photo.png" alt="Фото Козина Артёма" />
+                    <h2 class="profile-name">Козин Артём Романович</h2>
+                    <p class="profile-group">ЭФБО-15-24</p>
+                </section>
 
-            <section class="skills">
-                <h2>Навыки</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">HTML/CSS</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">Дизайн</div>
-                </div>
-            </section>
+                <section class="about-me" aria-labelledby="about-title">
+                    <h3 id="about-title" style="margin-top:0;">Обо мне</h3>
+                    <p>
+                        Я родился в Москве. Увлекаюсь программированием, изучаю веб-разработку и постоянно совершенствую свои навыки.
+                        Сейчас учусь создавать интерфейсы и стилизовать их в современных темах, в том числе в тёмном неоновом стиле.
+                    </p>
+                </section>
 
-            <section class="experience">
-                <h2>Мой опыт работы</h2>
-                <div class="experience-list">
-                    <article class="experience-item">
-                        <h3>Опыт 1</h3>
-                        <p>Работал фантазёром. Сочинял и праздновал. Развивал творческое мышление и креативный подход к решению задач.</p>
+                <section class="skills-container" aria-label="Навыки">
+                    <div class="skill-tag">HTML/CSS</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">Дизайн</div>
+                </section>
+
+                <section class="experience-section" aria-labelledby="exp-title">
+                    <h2 id="exp-title" class="section-title">Мой опыт работы</h2>
+
+                    <article class="experience-card" aria-labelledby="exp1">
+                        <h3 id="exp1" class="experience-title">Опыт 1</h3>
+                        <p class="experience-desc">Работал фантазёром. Сочинял и праздновал. Развивал творческое мышление и креативный подход к решению задач.</p>
                     </article>
-                    <article class="experience-item">
-                        <h3>Опыт 2</h3>
-                        <p>Играл, все трофеи выбивал. Достигал поставленных целей и демонстрировал настойчивость в достижении результатов.</p>
-                    </article>
-                    <article class="experience-item">
-                        <h3>Опыт 3</h3>
-                        <p>Отсутствовал, не появлялся. Период самообразования и поиска своего профессионального пути.</p>
-                    </article>
-                </div>
-            </section>
-        </main>
 
-        <footer>
-            <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
-        </footer>
-    </div>
-</body>
+                    <article class="experience-card" aria-labelledby="exp2">
+                        <h3 id="exp2" class="experience-title">Опыт 2</h3>
+                        <p class="experience-desc">Играл, все трофеи выбирал. Достигал поставленных целей и демонстрировал настойчивость в достижении результатов.</p>
+                    </article>
+
+                    <article class="experience-card" aria-labelledby="exp3">
+                        <h3 id="exp3" class="experience-title">Опыт 3</h3>
+                        <p class="experience-desc">Период самообразования и поиска профессионального пути. Участвовал в учебных проектах и практиках.</p>
+                    </article>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer" role="contentinfo">
+                <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
+            </footer>
+        </div>
+    </body>
 </html>

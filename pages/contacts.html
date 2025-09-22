@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Козин Артём Романович</title>
-    <link rel="stylesheet" href="../style/styles.css">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты - Козин Артём Романович</title>
+  <link rel="stylesheet" href="../style/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Персональный сайт</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="goods.html">Товары</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="practices.html">Что-то</a></li>
-            </ul>
-        </nav>
+  <div class="page-container">
+    <header class="header" role="banner">
+      <span class="logo">Семестровая работа</span>
     </header>
 
-    <main>
-        <h2>Контактная информация</h2>
-        
-        <div class="contact-info">
-            <section class="contact-item">
-                <h3>Адрес электронной почты:</h3>
-                <p>VostArt.kozin@yandex.ru</p>
-            </section>
+    <nav class="nav" role="navigation" aria-label="Главное меню">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+        <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+        <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contacts.html" aria-current="page">Контакты</a></li>
+      </ul>
+    </nav>
 
-            <section class="contact-item">
-                <h3>Адрес:</h3>
-                <p>г. Москва, ул. Пушкина, д. Колотушкина</p>
-            </section>
+    <main class="content" role="main" id="main">
+      <h1 class="profile-title">Контактная информация</h1>
 
-            <section class="contact-item">
-                <h3>Телефон:</h3>
-                <p>+7 (?∆?) њћƒ-69-9ѕ</p>
-            </section>
+      <div class="contact-info" style="margin-top:18px;">
+        <section class="contact-item experience-card" aria-labelledby="c-email">
+          <h3 id="c-email" class="experience-title">Адрес электронной почты</h3>
+          <p><a href="mailto:VostArt.kozin@yandex.ru" style="color:var(--neon-cyan);text-decoration:underline;">VostArt.kozin@yandex.ru</a></p>
+        </section>
 
-            <section class="contact-item">
-                <h3>График работы:</h3>
-                <p>Пн-Пт: 19:00-20:00</p>
-                <p>Сб-Вс: выходной</p>
-            </section>
-        </div>
+        <section class="contact-item experience-card" aria-labelledby="c-address">
+          <h3 id="c-address" class="experience-title">Адрес</h3>
+          <p>г. Москва, ул. Пушкина, д. Колотушкина</p>
+        </section>
 
-        <div class="contact-buttons">
-            <button onclick="window.location.href='tel:+79999999999'" class="btn btn-primary">Позвоните мне</button>
-            <button onclick="window.location.href='mailto:artem.kozin@mirea.ru'" class="btn btn-secondary">Написать письмо</button>
-        </div>
+        <section class="contact-item experience-card" aria-labelledby="c-phone">
+          <h3 id="c-phone" class="experience-title">Телефон</h3>
+          <p><a href="tel:+79999999999" style="color:var(--neon-cyan);text-decoration:underline;">+7 (999) 99-99-99</a></p>
+        </section>
+
+        <section class="contact-item experience-card" aria-labelledby="c-hours">
+          <h3 id="c-hours" class="experience-title">График работы</h3>
+          <p>Пн-Пт: 19:00-20:00</p>
+          <p>Сб-Вс: выходной</p>
+        </section>
+      </div>
+
+      <div class="contact-buttons" style="margin-top:16px;">
+        <a class="btn" href="tel:+79999999999">Позвоните мне</a>
+        <a class="btn" href="mailto:artem.kozin@mirea.ru" style="margin-left:10px;">Написать письмо</a>
+      </div>
     </main>
 
-    <footer>
-        <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
+    <footer class="footer" role="contentinfo">
+      <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
     </footer>
+  </div>
 </body>
 </html>

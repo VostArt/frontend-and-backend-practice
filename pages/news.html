@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новости - Козин Артём Романович</title>
-    <link rel="stylesheet" href="../style/styles.css">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Новости - Козин Артём Романович</title>
+  <link rel="stylesheet" href="../style/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Персональный сайт</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="goods.html">Товары</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="practices.html">Что-то</a></li>
-            </ul>
-        </nav>
+  <div class="page-container">
+    <!-- Header -->
+    <header class="header" role="banner">
+      <span class="logo">Семестровая работа</span>
     </header>
 
-    <main>
-        <h2>Последние новости</h2>
-        
-        <article class="news-item">
-            <header>
-                <h3>Новость 1</h3>
-                <time datetime="2025-01-01T12:00">01.01.2025 12:00</time>
-                <span class="author">Козин А.Р.</span>
-            </header>
-            <p>Текст новости 1. Бла-бла. Сегодня я начал изучать новые технологии веб-разработки и уже достиг первых успехов.</p>
-        </article>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Главное меню">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link active" href="news.html" aria-current="page">Новости</a></li>
+        <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+        <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
 
-        <article class="news-item">
-            <header>
-                <h3>Новость 2</h3>
-                <time datetime="2025-01-01T12:00">01.01.2025 12:00</time>
-                <span class="author">Козин А.Р.</span>
-            </header>
-            <p>Текст новости 2. Бла-бла. Завершил работу над новым проектом, который поможет автоматизировать процессы обучения.</p>
-        </article>
+    <!-- Main -->
+    <main class="content" role="main" id="main">
+      <h1 class="profile-title">Последние новости</h1>
 
-        <article class="news-item">
-            <header>
-                <h3>Новость 3</h3>
-                <time datetime="2025-01-01T12:00">01.01.2025 12:00</time>
-                <span class="author">Козин А.Р.</span>
-            </header>
-            <p>Текст новости 3. Бла-бла. Планирую участие в хакатоне по фронтенд-разработке, готовлюсь к новым вызовам.</p>
-        </article>
+      <article class="news-item" aria-labelledby="n1">
+        <header>
+          <h2 id="n1" class="experience-title">Новость 1</h2>
+          <div class="news-meta" style="margin-top:6px;">
+            <time datetime="2025-01-01T12:00">01.01.2025 12:00</time>
+            <span class="author" style="margin-left:10px;color:var(--muted);">Козин А.Р.</span>
+          </div>
+        </header>
+        <p>Текст новости 1. Бла-бла. Сегодня я начал изучать новые технологии веб-разработки и уже достиг первых успехов.</p>
+      </article>
+
+      <article class="news-item" aria-labelledby="n2">
+        <header>
+          <h2 id="n2" class="experience-title">Новость 2</h2>
+          <div class="news-meta" style="margin-top:6px;">
+            <time datetime="2025-01-01T12:00">01.01.2025 12:00</time>
+            <span class="author" style="margin-left:10px;color:var(--muted);">Козин А.Р.</span>
+          </div>
+        </header>
+        <p>Текст новости 2. Бла-бла. Завершил работу над новым проектом, который поможет автоматизировать процессы обучения.</p>
+      </article>
+
+      <article class="news-item" aria-labelledby="n3">
+        <header>
+          <h2 id="n3" class="experience-title">Новость 3</h2>
+          <div class="news-meta" style="margin-top:6px;">
+            <time datetime="2025-01-01T12:00">01.01.2025 12:00</time>
+            <span class="author" style="margin-left:10px;color:var(--muted);">Козин А.Р.</span>
+          </div>
+        </header>
+        <p>Текст новости 3. Бла-бла. Планирую участие в хакатоне по фронтенд-разработке, готовлюсь к новым вызовам.</p>
+      </article>
     </main>
 
-    <footer>
-        <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
     </footer>
+  </div>
 </body>
 </html>

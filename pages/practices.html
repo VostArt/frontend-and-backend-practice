@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Практики - Козин Артём Романович</title>
-    <link rel="stylesheet" href="../style/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Практики - Козин Артём Романович</title>
+  <link rel="stylesheet" href="../style/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Персональный сайт</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="goods.html">Товары</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="practices.html">Что-то</a></li>
-            </ul>
-        </nav>
+  <div class="page-container">
+    <header class="header" role="banner">
+      <span class="logo">Семестровая работа</span>
     </header>
 
-    <main>
-        <h2>Что-то интересное</h2>
-        
-        <div class="contact-info">
-            <section class="contact-item">
-                <h3>Раздел 1</h3>
-                <p>Интересная информация о первом разделе. Что-то написано здесь для демонстрации.</p>
-            </section>
+    <nav class="nav" role="navigation" aria-label="Главное меню">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+        <li class="nav-item"><a class="nav-link active" href="practices.html" aria-current="page">Практики</a></li>
+        <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
 
-            <section class="contact-item">
-                <h3>Раздел 2</h3>
-                <p>Еще больше интересной информации во втором разделе. Продолжение демонстрационного текста.</p>
-            </section>
+    <main class="content" role="main" id="main">
+      <h1 class="profile-title">Что-то интересное</h1>
 
-            <section class="contact-item">
-                <h3>Раздел 3</h3>
-                <p>Завершающая часть демонстрационного контента в третьем разделе.</p>
-            </section>
-        </div>
+      <div class="section-grid" style="margin-top:18px;">
+        <section class="contact-item experience-card" aria-labelledby="s1">
+          <h3 id="s1" class="experience-title">Раздел 1</h3>
+          <p class="experience-desc">Интересная информация о первом разделе. Что-то написано здесь для демонстрации.</p>
+        </section>
+
+        <section class="contact-item experience-card" aria-labelledby="s2">
+          <h3 id="s2" class="experience-title">Раздел 2</h3>
+          <p class="experience-desc">Еще больше интересной информации во втором разделе. Продолжение демонстрационного текста.</p>
+        </section>
+
+        <section class="contact-item experience-card" aria-labelledby="s3">
+          <h3 id="s3" class="experience-title">Раздел 3</h3>
+          <p class="experience-desc">Завершающая часть демонстрационного контента в третьем разделе.</p>
+        </section>
+      </div>
     </main>
 
-    <footer>
-        <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
+    <footer class="footer" role="contentinfo">
+      <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
     </footer>
+  </div>
 </body>
 </html>
