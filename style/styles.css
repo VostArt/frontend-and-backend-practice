@@ -1,10 +1,10 @@
-/* neon-dark.css — ТЁМНЫЙ НЕОН */
+/* style/styles.css — ТЁМНЫЙ НЕОН (объединённый, основной файл стилей) */
 
 /* ===== ПЕРЕМЕННЫЕ ===== */
 :root{
-  --bg-dark-1: #06070a;    /* почти чёрный */
-  --bg-dark-2: #0b1220;    /* глубокий синий-черный */
-  --panel-bg: rgba(10,12,20,0.66); /* стеклянная панель */
+  --bg-dark-1: #06070a;
+  --bg-dark-2: #0b1220;
+  --panel-bg: rgba(10,12,20,0.66);
   --panel-border: rgba(255,255,255,0.04);
 
   --neon-cyan: #00f2fe;
@@ -43,6 +43,7 @@ body {
   overflow: hidden;
   box-shadow: var(--glass-shadow), 0 0 120px rgba(58,12,92,0.04);
   border: 1px solid var(--panel-border);
+  position: relative;
 }
 
 /* декоративный неоновый контур (снаружи) */
@@ -297,7 +298,6 @@ body {
   100% { box-shadow: 0 0 10px rgba(0,242,254,0.8), 0 0 30px rgba(0,242,254,0.12); transform: translateY(0); }
 }
 
-/* Можно добавить пульсацию для ключевого элемента */
 .header .logo.pulse { animation: neon-pulse 2.6s infinite ease-in-out; }
 
 /* ===== АДАПТИВ ===== */
