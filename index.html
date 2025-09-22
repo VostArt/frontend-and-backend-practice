@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная - Козин Артём Романович</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
     <header>
-        <h1>Семестровая работа</h1>
+        <h1>Персональный сайт</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -20,44 +21,50 @@
         </nav>
     </header>
 
-    <div id="content">
-        <h2>Информация об авторе</h2>
-        <img src="images/photo.png" alt="Фото Козина Артёма" width="200" height="250">
-        <h3>Козин Артём Романович</h3>
-        <p>ЭФБО-15-24</p>
-        
-        <div>
-            <h3>Обо мне:</h3>
-            <p>Я родился в Москве. Увлекаюсь программированием, изучаю веб-разработку и постоянно совершенствую свои навыки.</p>
-        </div>
-        
-        <div>
-            <h3>Навыки:</h3>
-            <div>HTML/CSS</div>
-            <div>JavaScript</div>
-            <div>Python</div>
-            <div>Дизайн</div>
-        </div>
+    <main>
+        <section class="author-info">
+            <h2>Информация об авторе</h2>
+            <div class="author-card">
+                <img src="images/photo.png" alt="Фото Козина Артёма" width="200" height="250">
+                <div class="author-details">
+                    <h3>Козин Артём Романович</h3>
+                    <p class="group">ЭФБО-15-24</p>
+                    <div class="about-me">
+                        <h4>Обо мне:</h4>
+                        <p>Я родился в Москве. Увлекаюсь программированием, изучаю веб-разработку и постоянно совершенствую свои навыки.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div>
-            <h2>Мой опыт работы:</h2>
-            
-            <div>
-                <h3>Опыт 1</h3>
-                <p>Работал фантазёром. Сочинял и праздновал. Развивал творческое мышление и креативный подход к решению задач.</p>
+        <section class="skills">
+            <h2>Навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Дизайн</div>
             </div>
-            
-            <div>
-                <h3>Опыт 2</h3>
-                <p>Играл, все трофеи выбивал. Достигал поставленных целей и демонстрировал настойчивость в достижении результатов.</p>
+        </section>
+
+        <section class="experience">
+            <h2>Мой опыт работы</h2>
+            <div class="experience-list">
+                <article class="experience-item">
+                    <h3>Опыт 1</h3>
+                    <p>Работал фантазёром. Сочинял и праздновал. Развивал творческое мышление и креативный подход к решению задач.</p>
+                </article>
+                <article class="experience-item">
+                    <h3>Опыт 2</h3>
+                    <p>Играл, все трофеи выбивал. Достигал поставленных целей и демонстрировал настойчивость в достижении результатов.</p>
+                </article>
+                <article class="experience-item">
+                    <h3>Опыт 3</h3>
+                    <p>Отсутствовал, не появлялся. Период самообразования и поиска своего профессионального пути.</p>
+                </article>
             </div>
-            
-            <div>
-                <h3>Опыт 3</h3>
-                <p>Отсутствовал, не появлялся. Период самообразования и поиска своего профессионального пути.</p>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer>
         <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>

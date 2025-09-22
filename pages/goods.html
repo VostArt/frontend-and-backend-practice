@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары</title>
-    <link rel="stylesheet" href="../style/styles.css">
+    <title>Товары - Козин Артём Романович</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/goods.css">
 </head>
 <body>
     <header>
@@ -15,27 +16,42 @@
                 <li><a href="news.html">Новости</a></li>
                 <li><a href="goods.html">Товары</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="practices.html">Что-то</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Товар 1</h2>
-        <img src="../images/goods1.jpg" alt="Товар 1" width="300" height="200">
-        <p>Цена: 1000 руб.</p>
-        <p>Описание товара 1. Отличный продукт для начинающих разработчиков.</p>
-        <hr>
+        <h2>Наши товары</h2>
+        
+        <section class="goods-grid">
+            <article class="product">
+                <img src="../images/goods1.jpg" alt="Товар 1" width="300" height="200">
+                <div class="product-info">
+                    <h3>Товар 1</h3>
+                    <p class="price">Цена: 1000 руб.</p>
+                    <p class="description">Описание товара 1. Отличный продукт для начинающих разработчиков.</p>
+                </div>
+            </article>
 
-        <h2>Товар 2</h2>
-        <img src="../images/goods2.jpg" alt="Товар 2" width="300" height="200">
-        <p>Цена: 150000 руб.</p>
-        <p>Описание товара 2. Профессиональный инструмент для веб-разработки.</p>
-        <hr>
+            <article class="product">
+                <img src="../images/goods2.jpg" alt="Товар 2" width="300" height="200">
+                <div class="product-info">
+                    <h3>Товар 2</h3>
+                    <p class="price">Цена: 1500 руб.</p>
+                    <p class="description">Описание товара 2. Профессиональный инструмент для веб-разработки.</p>
+                </div>
+            </article>
 
-        <h2>Товар 3</h2>
-        <img src="../images/goods3.jpg" alt="Товар 3" width="300" height="200">
-        <p>Цена: 20000 руб.</p>
-        <p>Описание товара 3. Премиум решение для опытных программистов.</p>
+            <article class="product">
+                <img src="../images/goods3.jpg" alt="Товар 3" width="300" height="200">
+                <div class="product-info">
+                    <h3>Товар 3</h3>
+                    <p class="price">Цена: 2000 руб.</p>
+                    <p class="description">Описание товара 3. Премиум решение для опытных программистов.</p>
+                </div>
+            </article>
+        </section>
     </main>
 
     <footer>
