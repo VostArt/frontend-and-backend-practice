@@ -1,62 +1,121 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Контакты - Козин Артём Романович</title>
-  <link rel="stylesheet" href="../style/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Козин Артём Романович</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-  <div class="page-container">
-    <header class="header" role="banner">
-      <span class="logo">Семестровая работа</span>
-    </header>
+    <div class="page-container">
+        <header class="header">
+            <h1>Персональный сайт</h1>
+        </header>
+        
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li> 
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <header class="contacts-header">
+                <h1 class="contacts-main-title">Наши контакты</h1>
+            </header>
+            
+            <section class="contacts-grid">
+                <article class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h2 class="contact-title">Электронная почта</h2>
+                    <address class="contact-detail">
+                        <p>Адрес электронной почты:</p>
+                        <p><strong>VostArt.kozin@yandex.ru</strong></p>
+                    </address>
+                </article>
 
-    <nav class="nav" role="navigation" aria-label="Главное меню">
-      <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-        <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-        <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contacts.html" aria-current="page">Контакты</a></li>
-      </ul>
-    </nav>
+                <article class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h2 class="contact-title">Адрес</h2>
+                    <address class="contact-detail">
+                        <p>г. Москва, ул. Пушкина, д. Колотушкина</p>
+                    </address>
+                </article>
 
-    <main class="content" role="main" id="main">
-      <h1 class="profile-title">Контактная информация</h1>
+                <article class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h2 class="contact-title">Телефон</h2>
+                    <address class="contact-detail">
+                        <p>+7 (???)-???-??-??</p>
+                    </address>
+                </article>
 
-      <div class="contact-info" style="margin-top:18px;">
-        <section class="contact-item experience-card" aria-labelledby="c-email">
-          <h3 id="c-email" class="experience-title">Адрес электронной почты</h3>
-          <p><a href="mailto:VostArt.kozin@yandex.ru" style="color:var(--neon-cyan);text-decoration:underline;">VostArt.kozin@yandex.ru</a></p>
-        </section>
+                <article class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h2 class="contact-title">График работы</h2>
+                    <div class="contact-detail">
+                        <p><strong>Пн-Пт:</strong> 19:00-20:00</p>
+                        <p><strong>Сб-Вс:</strong> выходной</p>
+                    </div>
+                </article>
+            </section>
 
-        <section class="contact-item experience-card" aria-labelledby="c-address">
-          <h3 id="c-address" class="experience-title">Адрес</h3>
-          <p>г. Москва, ул. Пушкина, д. Колотушкина</p>
-        </section>
+            <section class="contact-actions">
+                <button class="contact-btn primary" onclick="window.location.href='tel:+79999999999'">
+                    📞 Позвонить мне
+                </button>
+                <button class="contact-btn secondary" onclick="window.location.href='mailto:VostArt.kozin@yandex.ru'">
+                    ✉️ Написать письмо
+                </button>
+                <!-- Третья кнопка для открытия модального окна -->
+                <label for="contact-modal-toggle" class="contact-btn outline">
+                    💬 Форма связи
+                </label>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
+        </footer>    
+    </div>
 
-        <section class="contact-item experience-card" aria-labelledby="c-phone">
-          <h3 id="c-phone" class="experience-title">Телефон</h3>
-          <p><a href="tel:+79999999999" style="color:var(--neon-cyan);text-decoration:underline;">+7 (999) 99-99-99</a></p>
-        </section>
-
-        <section class="contact-item experience-card" aria-labelledby="c-hours">
-          <h3 id="c-hours" class="experience-title">График работы</h3>
-          <p>Пн-Пт: 19:00-20:00</p>
-          <p>Сб-Вс: выходной</p>
-        </section>
-      </div>
-
-      <div class="contact-buttons" style="margin-top:16px;">
-        <a class="btn" href="tel:+79999999999">Позвоните мне</a>
-        <a class="btn" href="mailto:artem.kozin@mirea.ru" style="margin-left:10px;">Написать письмо</a>
-      </div>
-    </main>
-
-    <footer class="footer" role="contentinfo">
-      <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
-    </footer>
-  </div>
+    <!-- Модальное окно формы обратной связи (без JavaScript) -->
+    <input type="checkbox" id="contact-modal-toggle" class="modal-toggle" hidden>
+    
+    <label for="contact-modal-toggle" class="modal-overlay">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 class="modal-title">Форма обратной связи</h3>
+                <label for="contact-modal-toggle" class="modal-close">×</label>
+            </div>
+            <div class="modal-body">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Сообщение отправлено!'); document.getElementById('contact-modal-toggle').checked = false;">
+                    <div class="form-group">
+                        <label class="form-label">Ваше имя</label>
+                        <input type="text" class="form-input" required placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" required placeholder="example@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Тема сообщения</label>
+                        <input type="text" class="form-input" required placeholder="Тема вашего сообщения">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Сообщение</label>
+                        <textarea class="form-textarea" required placeholder="Опишите ваш вопрос или предложение..."></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <label for="contact-modal-toggle" class="modal-btn secondary">Отмена</label>
+                        <button type="submit" class="modal-btn primary">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </label>
 </body>
 </html>

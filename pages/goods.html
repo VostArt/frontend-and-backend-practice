@@ -1,63 +1,84 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Товары - Козин Артём Романович</title>
-  <link rel="stylesheet" href="../style/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Козин Артём Романович</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-  <div class="page-container">
-    <header class="header" role="banner">
-      <span class="logo">Семестровая работа</span>
-    </header>
+    <div class="page-container">
+        <header class="header">
+            <h1>Персональный сайт</h1>
+        </header>
+        
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li> 
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <header class="goods-header">
+                <h1 class="goods-main-title">Наши товары</h1>
+                <p class="goods-subtitle">Мы предлагаем широкий ассортимент качественных товаров по доступным ценам</p>
+            </header>
+            
+            <section class="goods-grid">
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img class="product-image" src="../images/goods1.jpg" alt="Веб-разработка для начинающих">
+                        <div class="product-overlay">
+                            <span class="product-badge">ПОПУЛЯРНЫЙ</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-title">Курс по веб-разработке</h2>
+                        <p class="product-price">1000 руб.</p>
+                        <p class="product-description">Полный курс по основам веб-разработки для начинающих. Идеальное решение для старта в IT.</p>
+                        <button class="product-btn">Купить сейчас</button>
+                    </div>
+                </article>
 
-    <nav class="nav" role="navigation" aria-label="Главное меню">
-      <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-        <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-        <li class="nav-item"><a class="nav-link active" href="goods.html" aria-current="page">Товары</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img class="product-image" src="../images/goods2.jpg" alt="Профессиональные инструменты">
+                        <div class="product-overlay">
+                            <span class="product-badge">ХИТ</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-title">Профессиональные инструменты</h2>
+                        <p class="product-price">1500 руб.</p>
+                        <p class="product-description">Набор профессиональных инструментов для веб-разработки. Повысьте свою эффективность.</p>
+                        <button class="product-btn">Купить сейчас</button>
+                    </div>
+                </article>
 
-    <main class="content" role="main" id="main">
-      <h1 class="profile-title">Наши товары</h1>
-
-      <section class="goods-grid" aria-label="Список товаров">
-        <article class="product">
-          <img src="../images/goods1.jpg" alt="Товар 1" loading="lazy" style="width:100%;border-radius:8px;">
-          <div class="product-info" style="margin-top:12px;">
-            <h3 class="experience-title">Товар 1</h3>
-            <p class="price" style="color:var(--neon-cyan);font-weight:700;">Цена: 1000 руб.</p>
-            <p class="description">Описание товара 1. Отличный продукт для начинающих разработчиков.</p>
-          </div>
-        </article>
-
-        <article class="product">
-          <img src="../images/goods2.jpg" alt="Товар 2" loading="lazy" style="width:100%;border-radius:8px;">
-          <div class="product-info" style="margin-top:12px;">
-            <h3 class="experience-title">Товар 2</h3>
-            <p class="price" style="color:var(--neon-cyan);font-weight:700;">Цена: 1500 руб.</p>
-            <p class="description">Описание товара 2. Профессиональный инструмент для веб-разработки.</p>
-          </div>
-        </article>
-
-        <article class="product">
-          <img src="../images/goods3.jpg" alt="Товар 3" loading="lazy" style="width:100%;border-radius:8px;">
-          <div class="product-info" style="margin-top:12px;">
-            <h3 class="experience-title">Товар 3</h3>
-            <p class="price" style="color:var(--neon-cyan);font-weight:700;">Цена: 2000 руб.</p>
-            <p class="description">Описание товара 3. Премиум решение для опытных программистов.</p>
-          </div>
-        </article>
-      </section>
-    </main>
-
-    <footer class="footer" role="contentinfo">
-      <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
-    </footer>
-  </div>
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img class="product-image" src="../images/goods3.jpg" alt="Премиум решение">
+                        <div class="product-overlay">
+                            <span class="product-badge">ПРЕМИУМ</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-title">Премиум решение</h2>
+                        <p class="product-price">2000 руб.</p>
+                        <p class="product-description">Премиум решение для опытных программистов. Максимальная производительность и поддержка.</p>
+                        <button class="product-btn">Купить сейчас</button>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
+        </footer>    
+    </div>
 </body>
 </html>

@@ -1,71 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Новости - Козин Артём Романович</title>
-  <link rel="stylesheet" href="../style/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Козин Артём Романович</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-  <div class="page-container">
-    <!-- Header -->
-    <header class="header" role="banner">
-      <span class="logo">Семестровая работа</span>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Главное меню">
-      <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link active" href="news.html" aria-current="page">Новости</a></li>
-        <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-        <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
-
-    <!-- Main -->
-    <main class="content" role="main" id="main">
-      <h1 class="profile-title">Последние новости</h1>
-
-      <article class="news-item" aria-labelledby="n1">
-        <header>
-          <h2 id="n1" class="experience-title">Новость 1</h2>
-          <div class="news-meta" style="margin-top:6px;">
-            <time datetime="2025-01-01T12:00">01.01.2025 12:00</time>
-            <span class="author" style="margin-left:10px;color:var(--muted);">Козин А.Р.</span>
-          </div>
+    <div class="page-container">
+        <header class="header">
+            <h1>Персональный сайт</h1>
         </header>
-        <p>Текст новости 1. Бла-бла. Сегодня я начал изучать новые технологии веб-разработки и уже достиг первых успехов.</p>
-      </article>
+        
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li> 
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <header class="news-header">
+                <h1 class="news-main-title">Последние новости</h1>
+            </header>
+            
+            <section class="news-grid">
+                <article class="news-card">
+                    <header class="news-card-header">
+                        <time class="news-date" datetime="2025-01-01">01.01.2025</time>
+                        <h2 class="news-title">Запуск нового проекта</h2>
+                        <div class="news-meta">
+                            <span class="news-author">Автор: Козин А.Р.</span>
+                            <time class="news-time" datetime="12:00">12:00</time>
+                        </div>
+                    </header>
+                    <div class="news-content">
+                        <p>Текст новости 1. Мы рады сообщить о запуске нового проекта, который изменит подход к веб-разработке. Проект включает в себя современные технологии и инновационные решения.</p>
+                    </div>
+                    <footer class="news-card-footer">
+                        <a href="#" class="news-read-more">Читать далее...</a>
+                    </footer>
+                </article>
 
-      <article class="news-item" aria-labelledby="n2">
-        <header>
-          <h2 id="n2" class="experience-title">Новость 2</h2>
-          <div class="news-meta" style="margin-top:6px;">
-            <time datetime="2025-01-01T12:00">01.01.2025 12:00</time>
-            <span class="author" style="margin-left:10px;color:var(--muted);">Козин А.Р.</span>
-          </div>
-        </header>
-        <p>Текст новости 2. Бла-бла. Завершил работу над новым проектом, который поможет автоматизировать процессы обучения.</p>
-      </article>
+                <article class="news-card">
+                    <header class="news-card-header">
+                        <time class="news-date" datetime="2025-01-01">01.01.2025</time>
+                        <h2 class="news-title">Завершён важный этап</h2>
+                        <div class="news-meta">
+                            <span class="news-author">Автор: Козин А.Р.</span>
+                            <time class="news-time" datetime="12:00">12:00</time>
+                        </div>
+                    </header>
+                    <div class="news-content">
+                        <p>Текст новости 2. Завершил работу над новым проектом, который поможет автоматизировать процессы обучения и повысить эффективность образовательных программ.</p>
+                    </div>
+                    <footer class="news-card-footer">
+                        <a href="#" class="news-read-more">Читать далее...</a>
+                    </footer>
+                </article>
 
-      <article class="news-item" aria-labelledby="n3">
-        <header>
-          <h2 id="n3" class="experience-title">Новость 3</h2>
-          <div class="news-meta" style="margin-top:6px;">
-            <time datetime="2025-01-01T12:00">01.01.2025 12:00</time>
-            <span class="author" style="margin-left:10px;color:var(--muted);">Козин А.Р.</span>
-          </div>
-        </header>
-        <p>Текст новости 3. Бла-бла. Планирую участие в хакатоне по фронтенд-разработке, готовлюсь к новым вызовам.</p>
-      </article>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-      <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
-    </footer>
-  </div>
+                <article class="news-card">
+                    <header class="news-card-header">
+                        <time class="news-date" datetime="2025-01-01">01.01.2025</time>
+                        <h2 class="news-title">Участие в хакатоне</h2>
+                        <div class="news-meta">
+                            <span class="news-author">Автор: Козин А.Р.</span>
+                            <time class="news-time" datetime="12:00">12:00</time>
+                        </div>
+                    </header>
+                    <div class="news-content">
+                        <p>Текст новости 3. Планирую участие в хакатоне по фронтенд-разработке, готовлюсь к новым вызовам и возможностям для профессионального роста.</p>
+                    </div>
+                    <footer class="news-card-footer">
+                        <a href="#" class="news-read-more">Читать далее...</a>
+                    </footer>
+                </article>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
+        </footer>    
+    </div>
 </body>
 </html>

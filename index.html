@@ -1,87 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Семестровая работа - Козин Артём Романович</title>
-        <link rel="stylesheet" href="style/styles.css" />
-    </head>
-    <body>
-        <div class="page-container">
-            <!-- Header -->
-            <header class="header" role="banner">
-                <span class="logo" aria-hidden="true">Семестровая работа</span>
-            </header>
-
-            <!-- Navigation -->
-            <nav class="nav" role="navigation" aria-label="Главное меню">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/news.html">Новости</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/practices.html">Практики</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/goods.html">Товары</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contacts.html">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Main content -->
-            <main class="content" id="main" role="main">
-                <section class="profile-header" aria-labelledby="profile-title">
-                    <h1 id="profile-title" class="profile-title">Информация об авторе</h1>
-                    <img class="profile-photo" src="images/photo.png" alt="Фото Козина Артёма" />
-                    <h2 class="profile-name">Козин Артём Романович</h2>
-                    <p class="profile-group">ЭФБО-15-24</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Козин Артём Романович</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1>Vost_Art</h1>
+        </header>
+        
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li> 
+                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <article class="main-grid">
+                <section class="profile-section grid-item">
+                    <header class="profile-header">
+                        <h1 class="profile-title">Информация об авторе</h1>
+                        <img class="profile-photo" src="images/photo.png" alt="Фото Козина Артёма">
+                        <h2 class="profile-name">Козин Артём Романович</h2>
+                        <p class="profile-group">ЭФБО-15-24</p>
+                    </header>
                 </section>
 
-                <section class="about-me" aria-labelledby="about-title">
-                    <h3 id="about-title" style="margin-top:0;">Обо мне</h3>
-                    <p>
-                        Я родился в Москве. Увлекаюсь программированием, изучаю веб-разработку и постоянно совершенствую свои навыки.
-                        Сейчас учусь создавать интерфейсы и стилизовать их в современных темах, в том числе в тёмном неоновом стиле.
-                    </p>
+                <section class="about-section grid-item">
+                    <div class="about-me">
+                        <h2>Обо мне</h2>
+                        <p>Я родился в Москве. Увлекаюсь программированием, изучаю веб-разработку и постоянно совершенствую свои навыки. Люблю создавать современные и функциональные веб-приложения.</p>
+                    </div>
                 </section>
 
-                <section class="skills-container" aria-label="Навыки">
-                    <div class="skill-tag">HTML/CSS</div>
-                    <div class="skill-tag">JavaScript</div>
-                    <div class="skill-tag">Python</div>
-                    <div class="skill-tag">Дизайн</div>
+                
+                <section class="skills-section grid-item">
+                    <h2 class="section-title">Мои навыки</h2>
+                    <div class="skills-container">
+                        <div class="skill-tag">HTML/CSS</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">Reacting</div>
+                        <div class="skill-tag">Design</div>
+                    </div>
                 </section>
 
-                <section class="experience-section" aria-labelledby="exp-title">
-                    <h2 id="exp-title" class="section-title">Мой опыт работы</h2>
-
-                    <article class="experience-card" aria-labelledby="exp1">
-                        <h3 id="exp1" class="experience-title">Опыт 1</h3>
-                        <p class="experience-desc">Работал фантазёром. Сочинял и праздновал. Развивал творческое мышление и креативный подход к решению задач.</p>
-                    </article>
-
-                    <article class="experience-card" aria-labelledby="exp2">
-                        <h3 id="exp2" class="experience-title">Опыт 2</h3>
-                        <p class="experience-desc">Играл, все трофеи выбирал. Достигал поставленных целей и демонстрировал настойчивость в достижении результатов.</p>
-                    </article>
-
-                    <article class="experience-card" aria-labelledby="exp3">
-                        <h3 id="exp3" class="experience-title">Опыт 3</h3>
-                        <p class="experience-desc">Период самообразования и поиска профессионального пути. Участвовал в учебных проектах и практиках.</p>
-                    </article>
+                <section class="experience-section grid-item">
+                    <h2 class="section-title">Мой опыт работы</h2>
+                    <div class="experience-list">
+                        <article class="experience-card">
+                            <h3 class="experience-title">Опыт 1</h3>
+                            <p class="experience-desc">Работал фантазёром. Сочинял и праздновал. Развивал творческое мышление и креативный подход к решению задач.</p>
+                        </article>
+                        <article class="experience-card">
+                            <h3 class="experience-title">Опыт 2</h3>
+                            <p class="experience-desc">Играл, все трофеи выбивал. Достигал поставленных целей и демонстрировал настойчивость в достижении результатов.</p>
+                        </article>
+                        <article class="experience-card">
+                            <h3 class="experience-title">Опыт 3</h3>
+                            <p class="experience-desc">Отсутствовал, не появлялся. Период самообразования и поиска своего профессионального пути.</p>
+                        </article>
+                    </div>
                 </section>
-            </main>
-
-            <!-- Footer -->
-            <footer class="footer" role="contentinfo">
-                <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
-            </footer>
-        </div>
-    </body>
+            </article>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
+        </footer>    
+    </div>
+</body>
 </html>
