@@ -1,62 +1,70 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - Козин Артём Романович</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
-<body>
+<body class="body">
     <div class="page-container">
         <header class="header">
-            <h1>Персональный сайт</h1>
+            <div style="text-align: center;">
+                <h1 class="header__title">Vost_Art</h1>
+                <div style="display: flex; justify-content: center; margin-top: 15px;">
+                    <button class="theme-switcher__button" id="themeToggle" aria-label="Переключить тему" style="position: static; margin-top: 0;">
+                        <span class="theme-switcher__icon">🌙</span>
+                        <span class="theme-switcher__text">Светлая тема</span>
+                    </button>
+                </div>
+            </div>
         </header>
         
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li> 
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li> 
+                <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--active" href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
         
         <main class="content">
             <header class="contacts-header">
-                <h1 class="contacts-main-title">Наши контакты</h1>
+                <h1 class="contacts__title">Наши контакты</h1>
             </header>
             
             <section class="contacts-grid">
                 <article class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h2 class="contact-title">Электронная почта</h2>
-                    <address class="contact-detail">
+                    <div class="contact-card__icon">📧</div>
+                    <h2 class="contact-card__title">Электронная почта</h2>
+                    <address class="contact-card__detail">
                         <p>Адрес электронной почты:</p>
                         <p><strong>VostArt.kozin@yandex.ru</strong></p>
                     </address>
                 </article>
 
                 <article class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h2 class="contact-title">Адрес</h2>
-                    <address class="contact-detail">
+                    <div class="contact-card__icon">📍</div>
+                    <h2 class="contact-card__title">Адрес</h2>
+                    <address class="contact-card__detail">
                         <p>г. Москва, ул. Пушкина, д. Колотушкина</p>
                     </address>
                 </article>
 
                 <article class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h2 class="contact-title">Телефон</h2>
-                    <address class="contact-detail">
+                    <div class="contact-card__icon">📞</div>
+                    <h2 class="contact-card__title">Телефон</h2>
+                    <address class="contact-card__detail">
                         <p>+7 (???)-???-??-??</p>
                     </address>
                 </article>
 
                 <article class="contact-card">
-                    <div class="contact-icon">🕒</div>
-                    <h2 class="contact-title">График работы</h2>
-                    <div class="contact-detail">
+                    <div class="contact-card__icon">🕒</div>
+                    <h2 class="contact-card__title">График работы</h2>
+                    <div class="contact-card__detail">
                         <p><strong>Пн-Пт:</strong> 19:00-20:00</p>
                         <p><strong>Сб-Вс:</strong> выходной</p>
                     </div>
@@ -64,14 +72,13 @@
             </section>
 
             <section class="contact-actions">
-                <button class="contact-btn primary" onclick="window.location.href='tel:+79999999999'">
+                <button class="button button--primary" onclick="window.location.href='tel:+79999999999'">
                     📞 Позвонить мне
                 </button>
-                <button class="contact-btn secondary" onclick="window.location.href='mailto:VostArt.kozin@yandex.ru'">
+                <button class="button button--secondary" onclick="window.location.href='mailto:VostArt.kozin@yandex.ru'">
                     ✉️ Написать письмо
                 </button>
-                <!-- Третья кнопка для открытия модального окна -->
-                <label for="contact-modal-toggle" class="contact-btn outline">
+                <label for="contact-modal-toggle" class="button button--outline">
                     💬 Форма связи
                 </label>
             </section>
@@ -82,16 +89,16 @@
         </footer>    
     </div>
 
-    <!-- Модальное окно формы обратной связи (без JavaScript) -->
+    <!-- Модальное окно формы обратной связи -->
     <input type="checkbox" id="contact-modal-toggle" class="modal-toggle" hidden>
     
     <label for="contact-modal-toggle" class="modal-overlay">
         <div class="modal" onclick="event.stopPropagation()">
-            <div class="modal-header">
-                <h3 class="modal-title">Форма обратной связи</h3>
-                <label for="contact-modal-toggle" class="modal-close">×</label>
+            <div class="modal__header">
+                <h3 class="modal__title">Форма обратной связи</h3>
+                <label for="contact-modal-toggle" class="modal__close">×</label>
             </div>
-            <div class="modal-body">
+            <div class="modal__body">
                 <form class="contact-form" onsubmit="event.preventDefault(); alert('Сообщение отправлено!'); document.getElementById('contact-modal-toggle').checked = false;">
                     <div class="form-group">
                         <label class="form-label">Ваше имя</label>
@@ -109,13 +116,45 @@
                         <label class="form-label">Сообщение</label>
                         <textarea class="form-textarea" required placeholder="Опишите ваш вопрос или предложение..."></textarea>
                     </div>
-                    <div class="modal-footer">
-                        <label for="contact-modal-toggle" class="modal-btn secondary">Отмена</label>
-                        <button type="submit" class="modal-btn primary">Отправить</button>
+                    <div class="modal__footer">
+                        <label for="contact-modal-toggle" class="modal__button modal__button--secondary">Отмена</label>
+                        <button type="submit" class="modal__button modal__button--primary">Отправить</button>
                     </div>
                 </form>
             </div>
         </div>
     </label>
+
+    <script>
+    // Переключение темы
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+
+    // Устанавливаем начальную тему
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeButton(currentTheme);
+
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeButton(newTheme);
+    });
+
+    function updateThemeButton(theme) {
+        const icon = themeToggle.querySelector('.theme-switcher__icon');
+        const text = themeToggle.querySelector('.theme-switcher__text');
+        
+        if (theme === 'dark') {
+            icon.textContent = '🩸';
+            text.textContent = 'Кровавая тема';
+        } else {
+            icon.textContent = '🌙';
+            text.textContent = 'Тёмная тема';
+        }
+    }
+</script>
 </body>
 </html>

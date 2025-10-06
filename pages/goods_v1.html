@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Козин Артём Романович</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    
+</head>
+<body class="body">
+    <div class="page-container">
+        <header class="header">
+            <h1 class="header__title">Персональный сайт</h1>
+            <div class="theme-switcher">
+                <button class="theme-switcher__button" id="themeToggle" aria-label="Переключить тему">
+                    <span class="theme-switcher__icon">🌙</span>
+                    <span class="theme-switcher__text">Кровавая тема</span>
+                </button>
+            </div>
+        </header>
+        
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li> 
+                <li class="nav__item"><a class="nav__link nav__link--active" href="goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <header class="goods-header">
+                <h1 class="goods__title">Наши товары</h1>
+                <p class="goods__subtitle">Мы предлагаем широкий ассортимент качественных товаров по доступным ценам</p>
+                <p class="goods__instructions">💡 <strong>Подсказка:</strong> Кликните на карточку для выбора, двойной клик для сброса, Escape для отмены всех выборов</p>
+            </header>
+            
+            <section class="goods-grid">
+                <!-- Товар 1 - Базовый -->
+                <article class="product-card" data-product-id="1">
+                    <div class="product-card__image-container">
+                        <img class="product-card__image" src="../images/goods1.jpg" alt="Веб-разработка для начинающих">
+                        <div class="product-card__overlay">
+                            <span class="product-card__badge">ПОПУЛЯРНЫЙ</span>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <h2 class="product-card__title">Курс по веб-разработке</h2>
+                        <div class="product-card__price-container">
+                            <p class="product-card__price">1000 руб.</p>
+                        </div>
+                        <p class="product-card__description">Полный курс по основам веб-разработки для начинающих. Идеальное решение для старта в IT.</p>
+                        <button class="product-card__button" data-product-id="1">Купить сейчас</button>
+                    </div>
+                </article>
+
+                <!-- Товар 2 - Базовый -->
+                <article class="product-card" data-product-id="2">
+                    <div class="product-card__image-container">
+                        <img class="product-card__image" src="../images/goods2.jpg" alt="Профессиональные инструменты">
+                        <div class="product-card__overlay">
+                            <span class="product-card__badge">ХИТ</span>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <h2 class="product-card__title">Профессиональные инструменты</h2>
+                        <div class="product-card__price-container">
+                            <p class="product-card__price">1500 руб.</p>
+                        </div>
+                        <p class="product-card__description">Набор профессиональных инструментов для веб-разработки. Повысьте свою эффективность.</p>
+                        <button class="product-card__button" data-product-id="2">Купить сейчас</button>
+                    </div>
+                </article>
+
+                <!-- Товар 3 - Со скидкой -->
+                <article class="product-card product-card--discount" data-product-id="3">
+                    <div class="product-card__image-container">
+                        <img class="product-card__image" src="../images/goods3.jpg" alt="Премиум решение">
+                        <div class="product-card__overlay">
+                            <span class="product-card__badge">ПРЕМИУМ</span>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <h2 class="product-card__title">Премиум решение</h2>
+                        <div class="product-card__price-container">
+                            <span class="product-card__price--old">2500 руб.</span>
+                            <span class="product-card__price--new">2000 руб.</span>
+                            <span class="product-card__discount-badge">-20%</span>
+                        </div>
+                        <p class="product-card__description">Премиум решение для опытных программистов. Максимальная производительность и поддержка.</p>
+                        <button class="product-card__button" data-product-id="3">Купить сейчас</button>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Панель выбранных товаров -->
+            <section class="selected-products" id="selectedProducts" style="display: none;">
+                <h2 class="section__title">Выбранные товары</h2>
+                <div class="selected-list" id="selectedList"></div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
+        </footer>    
+    </div>
+
+    <script>
+        // Переключение темы
+        const themeToggle = document.getElementById('themeToggle');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+
+        // Устанавливаем начальную тему
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateThemeButton(currentTheme);
+
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeButton(newTheme);
+        });
+
+        function updateThemeButton(theme) {
+            const icon = themeToggle.querySelector('.theme-switcher__icon');
+            const text = themeToggle.querySelector('.theme-switcher__text');
+            
+            if (theme === 'dark') {
+                icon.textContent = '🩸';
+                text.textContent = 'Кровавая тема';
+            } else {
+                icon.textContent = '🌙';
+                text.textContent = 'Тёмная тема';
+            }
+        }
+
+        // Управление состояниями карточек товаров
+        document.addEventListener('DOMContentLoaded', function() {
+            const productCards = document.querySelectorAll('.product-card');
+            const selectedProductsSection = document.getElementById('selectedProducts');
+            const selectedList = document.getElementById('selectedList');
+
+            // Функция обновления панели выбранных товаров
+            function updateSelectedProducts() {
+                const selectedCards = document.querySelectorAll('.product-card--selected');
+                
+                if (selectedCards.length > 0) {
+                    selectedProductsSection.style.display = 'block';
+                    selectedList.innerHTML = '';
+                    
+                    selectedCards.forEach(card => {
+                        const productId = card.getAttribute('data-product-id');
+                        const productTitle = card.querySelector('.product-card__title').textContent;
+                        const productPrice = card.querySelector('.product-card__price--new') 
+                            ? card.querySelector('.product-card__price--new').textContent 
+                            : card.querySelector('.product-card__price').textContent;
+                        
+                        const selectedItem = document.createElement('div');
+                        selectedItem.className = 'selected-item';
+                        selectedItem.innerHTML = `
+                            <strong>${productTitle}</strong> - ${productPrice} (ID: ${productId})
+                        `;
+                        selectedList.appendChild(selectedItem);
+                    });
+                } else {
+                    selectedProductsSection.style.display = 'none';
+                }
+            }
+
+            // Обработчики для карточек товаров
+            productCards.forEach(card => {
+                // Клик для выбора/снятия выбора
+                card.addEventListener('click', function(e) {
+                    if (!e.target.classList.contains('product-card__button')) {
+                        this.classList.toggle('product-card--selected');
+                        updateSelectedProducts();
+                    }
+                });
+
+                // Двойной клик для сброса всех выделений
+                card.addEventListener('dblclick', function(e) {
+                    productCards.forEach(c => {
+                        c.classList.remove('product-card--selected');
+                    });
+                    updateSelectedProducts();
+                });
+            });
+
+            // Обработка кнопок покупки
+            document.querySelectorAll('.product-card__button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const productId = this.getAttribute('data-product-id');
+                    const productCard = this.closest('.product-card');
+                    const productTitle = productCard.querySelector('.product-card__title').textContent;
+                    
+                    // Добавляем класс выбранного товара при покупке
+                    productCard.classList.add('product-card--selected');
+                    updateSelectedProducts();
+                    
+                    alert(`Товар "${productTitle}" (ID: ${productId}) добавлен в корзину!`);
+                });
+            });
+
+            // Управление состояниями через клавиатуру
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    // Сброс всех выделений по Escape
+                    productCards.forEach(card => {
+                        card.classList.remove('product-card--selected');
+                    });
+                    updateSelectedProducts();
+                }
+            });
+
+            // Инициализация панели выбранных товаров
+            updateSelectedProducts();
+        });
+    </script>
+
+    <style>
+        .selected-products {
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--color-card-bg);
+            border-radius: 15px;
+            border: 1px solid var(--color-border);
+        }
+
+        .selected-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 8px;
+            border-left: 3px solid var(--color-accent-cyan);
+        }
+
+        [data-theme="light"] .selected-item {
+            background: rgba(255, 0, 0, 0.1);
+            border-left: 3px solid var(--color-blood-accent);
+        }
+
+        .goods__instructions {
+            color: var(--color-text-secondary);
+            font-size: 0.9em;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 8px;
+            border-left: 3px solid var(--color-accent-cyan);
+        }
+
+        [data-theme="light"] .goods__instructions {
+            background: rgba(255, 0, 0, 0.1);
+            border-left: 3px solid var(--color-blood-accent);
+        }
+    </style>
+</body>
+</html>

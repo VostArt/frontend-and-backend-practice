@@ -1,50 +1,58 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практики - Козин Артём Романович</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
-<body>
+<body class="body">
     <div class="page-container">
         <header class="header">
-            <h1>Персональный сайт</h1>
+            <div style="text-align: center;">
+                <h1 class="header__title">Vost_Art</h1>
+                <div style="display: flex; justify-content: center; margin-top: 15px;">
+                    <button class="theme-switcher__button" id="themeToggle" aria-label="Переключить тему" style="position: static; margin-top: 0;">
+                        <span class="theme-switcher__icon">🌙</span>
+                        <span class="theme-switcher__text">Светлая тема</span>
+                    </button>
+                </div>
+            </div>
         </header>
         
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li> 
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--active" href="practices.html">Практики</a></li> 
+                <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
         
         <main class="content">
             <header class="practices-header">
-                <h1 class="practices-main-title">Практические работы</h1>
-                <p class="practices-subtitle">Здесь представлены мои практические работы и проекты</p>
+                <h1 class="practices__title">Практические работы</h1>
+                <p class="practices__subtitle">Здесь представлены мои практические работы и проекты</p>
             </header>
             
             <section class="practices-grid">
                 <article class="practice-card">
-                    <h2 class="practice-title">Адаптивный лендинг</h2>
-                    <p class="practice-desc">Разработка адаптивного лендинга с использованием современных CSS технологий и Grid/Flexbox</p>
-                    <div class="practice-tech">HTML5, CSS3, JavaScript</div>
+                    <h2 class="practice-card__title">Адаптивный лендинг</h2>
+                    <p class="practice-card__desc">Разработка адаптивного лендинга с использованием современных CSS технологий и Grid/Flexbox</p>
+                    <div class="practice-card__tech">HTML5, CSS3, JavaScript</div>
                 </article>
 
                 <article class="practice-card">
-                    <h2 class="practice-title">Веб-приложение</h2>
-                    <p class="practice-desc">Создание интерактивного веб-приложения с использованием React и современных фреймворков</p>
-                    <div class="practice-tech">React, Node.js, MongoDB</div>
+                    <h2 class="practice-card__title">Веб-приложение</h2>
+                    <p class="practice-card__desc">Создание интерактивного веб-приложения с использованием React и современных фреймворков</p>
+                    <div class="practice-card__tech">React, Node.js, MongoDB</div>
                 </article>
 
                 <article class="practice-card">
-                    <h2 class="practice-title">Оптимизация производительности</h2>
-                    <p class="practice-desc">Оптимизация производительности веб-сайта и SEO для улучшения пользовательского опыта</p>
-                    <div class="practice-tech">Webpack, Lighthouse, SEO</div>
+                    <h2 class="practice-card__title">Оптимизация производительности</h2>
+                    <p class="practice-card__desc">Оптимизация производительности веб-сайта и SEO для улучшения пользовательского опыта</p>
+                    <div class="practice-card__tech">Webpack, Lighthouse, SEO</div>
                 </article>
             </section>
         </main>
@@ -53,5 +61,37 @@
             <p>© 2024 Козин Артём Романович. ЭФБО-15-24. Все права защищены.</p>
         </footer>    
     </div>
+
+    <script>
+    // Переключение темы
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+
+    // Устанавливаем начальную тему
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeButton(currentTheme);
+
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeButton(newTheme);
+    });
+
+    function updateThemeButton(theme) {
+        const icon = themeToggle.querySelector('.theme-switcher__icon');
+        const text = themeToggle.querySelector('.theme-switcher__text');
+        
+        if (theme === 'dark') {
+            icon.textContent = '🩸';
+            text.textContent = 'Кровавая тема';
+        } else {
+            icon.textContent = '🌙';
+            text.textContent = 'Тёмная тема';
+        }
+    }
+</script>
 </body>
 </html>
